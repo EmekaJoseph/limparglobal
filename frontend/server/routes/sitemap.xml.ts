@@ -7,8 +7,8 @@ const routes = [
   { path: '/about', priority: '0.7', changefreq: 'monthly' },
   { path: '/insights', priority: '0.6', changefreq: 'weekly' },
   { path: '/contact', priority: '0.5', changefreq: 'yearly' },
-  { path: '/privacy-policy', priority: '0.2', changefreq: 'yearly' },
-  { path: '/terms', priority: '0.2', changefreq: 'yearly' }
+  { path: '/privacy-policy', priority: '0.2', changefreq: 'yearly' }
+  // '/terms' intentionally omitted for now — page exists but isn't linked or ready yet
 ]
 
 export default defineEventHandler((event) => {

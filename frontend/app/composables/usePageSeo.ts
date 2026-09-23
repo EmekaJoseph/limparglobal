@@ -6,7 +6,7 @@ interface PageSeoOptions {
 }
 
 export function usePageSeo(options: PageSeoOptions) {
-  const { title, description, image = '/logo.png', noindex = false } = options
+  const { title, description, image = '/images/og-cover.jpg', noindex = false } = options
   const siteUrl = useRuntimeConfig().public.siteUrl
   const path = useRequestURL().pathname
   const canonical = new URL(path, siteUrl).toString()

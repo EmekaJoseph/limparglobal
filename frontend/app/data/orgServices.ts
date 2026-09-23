@@ -1,17 +1,22 @@
-export const orgServices: string[] = [
-  'HR & People Strategy',
-  'Organisational Development',
-  'Talent & Performance Management',
-  'Learning & Development',
-  'Workforce Planning',
-  'Process & HR Systems',
-  'Capacity Building'
+export interface ServiceItem {
+  label: string
+  icon: string
+}
+
+export const orgServices: ServiceItem[] = [
+  { label: 'HR & People Strategy', icon: 'users' },
+  { label: 'Organisational Development', icon: 'building' },
+  { label: 'Talent & Performance Management', icon: 'target' },
+  { label: 'Learning & Development', icon: 'academic-cap' },
+  { label: 'Workforce Planning', icon: 'layers' },
+  { label: 'Process & HR Systems', icon: 'puzzle' },
+  { label: 'Capacity Building', icon: 'trending-up' }
 ]
 
-export const employerServices: string[] = [
-  'Talent sourcing and recruitment',
-  'African talent placement',
-  'Onboarding and HR support',
-  'Workforce / third-party staff management',
-  'Employment and HR administration support'
+export const employerServices: ServiceItem[] = [
+  { label: 'Talent sourcing and recruitment', icon: 'users' },
+  { label: 'African talent placement', icon: 'globe' },
+  { label: 'Onboarding and HR support', icon: 'compass' },
+  { label: 'Workforce / third-party staff management', icon: 'layers' },
+  { label: 'Employment and HR administration support', icon: 'briefcase' }
 ]

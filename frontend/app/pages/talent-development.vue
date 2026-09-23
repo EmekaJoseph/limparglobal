@@ -36,7 +36,7 @@ usePageSeo({
             class="flex flex-col gap-3 rounded-2xl border border-limpar-pale-border bg-white p-7 shadow-subtle transition-shadow duration-200 hover:shadow-card"
           >
             <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-limpar-deep text-white shadow-soft">
-              <AppIcon name="academic-cap" class="h-5 w-5" />
+              <AppIcon :name="academy.icon" class="h-5 w-5" />
             </div>
             <h3 class="font-heading text-lg font-bold text-limpar-ink">{{ academy.title }}</h3>
             <p class="text-sm leading-relaxed text-limpar-slate">{{ academy.description }}</p>
@@ -55,8 +55,11 @@ usePageSeo({
           <div
             v-for="pathway in pathways"
             :key="pathway.title"
-            class="flex flex-col gap-2 rounded-2xl border border-limpar-pale-border bg-white p-6 shadow-subtle transition-shadow duration-200 hover:shadow-card"
+            class="flex flex-col gap-3 rounded-2xl border border-limpar-pale-border bg-white p-6 shadow-subtle transition-shadow duration-200 hover:shadow-card"
           >
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-limpar-pale text-limpar-deep">
+              <AppIcon :name="pathway.icon" class="h-4 w-4" />
+            </div>
             <h3 class="font-heading text-base font-bold text-limpar-ink">{{ pathway.title }}</h3>
             <p class="text-sm leading-relaxed text-limpar-slate">{{ pathway.description }}</p>
           </div>

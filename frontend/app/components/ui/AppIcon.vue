@@ -121,5 +121,20 @@ defineProps<{
     <template v-else-if="name === 'spinner'">
       <path d="M12 3a9 9 0 1 0 9 9" />
     </template>
+
+    <template v-else-if="name === 'bolt'">
+      <path d="M13 3 5 13h5l-1 8 8-10h-5l1-8Z" />
+    </template>
+
+    <template v-else-if="name === 'pulse'">
+      <path d="M3 12h4l2-6 4 12 2-6h6" />
+    </template>
+
+    <template v-else-if="name === 'truck'">
+      <rect x="2" y="8" width="11" height="8" rx="1" />
+      <path d="M13 11h4l3 3v2h-7" />
+      <circle cx="7" cy="18" r="1.6" />
+      <circle cx="17" cy="18" r="1.6" />
+    </template>
   </svg>
 </template>

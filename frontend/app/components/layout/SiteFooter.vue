@@ -60,7 +60,7 @@ const year = new Date().getFullYear()
         <span>© {{ year }} Limpar Global. All rights reserved.</span>
         <div class="flex items-center gap-4">
           <NuxtLink to="/privacy-policy" class="transition-colors hover:text-limpar-sky-light">Privacy Policy</NuxtLink>
-          <NuxtLink to="/terms" class="transition-colors hover:text-limpar-sky-light">Terms of Use</NuxtLink>
+          <!-- <NuxtLink to="/terms" class="transition-colors hover:text-limpar-sky-light">Terms of Use</NuxtLink> -->
         </div>
       </div>
     </div>

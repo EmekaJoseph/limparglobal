@@ -6,6 +6,14 @@ usePageSeo({
   title: 'About Limpar',
   description: 'Limpar Global is a consulting and workforce solutions firm helping organisations build the people, capabilities, systems and operational foundations they need to grow.'
 })
+
+const focusAreas = [
+  'HR & Organisational Development',
+  'Talent Acquisition & Workforce Solutions',
+  'Learning & Capacity Development',
+  'Project & Business Operations',
+  'Strategic Business Support'
+]
 </script>
 
 <template>
@@ -18,18 +26,19 @@ usePageSeo({
 
     <section class="bg-white">
       <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-6 text-lg leading-relaxed text-limpar-slate">
-          <p>We work at the intersection of people, organisations and growth — combining human capital expertise, organisational development, talent solutions and practical business support to help organisations solve challenges and move from strategy to execution.</p>
-          <p>Our work spans Human Resources and Organisational Development, Talent Acquisition and Workforce Solutions, Learning and Capacity Development, Project and Business Operations, and strategic business support.</p>
-          <p>As organisations and the world of work continue to change, we are expanding this work through a new focus on African talent development and workforce delivery — helping organisations access capable African professionals while helping talent build the practical skills required to succeed in today's and tomorrow's workplace.</p>
+        <div class="flex flex-col gap-3">
+          <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">Who We Are</span>
+          <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">Where people, organisations and growth meet</h2>
         </div>
+        <p class="mt-6 text-lg leading-relaxed text-limpar-slate">We work at the intersection of people, organisations and growth — combining human capital expertise, organisational development, talent solutions and practical business support to help organisations solve challenges and move from strategy to execution.</p>
+        <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-wide text-limpar-slate/70">
+          <span v-for="area in focusAreas" :key="area">{{ area }}</span>
+        </div>
+        <p class="mt-6 text-lg leading-relaxed text-limpar-slate">As organisations and the world of work continue to change, we are expanding this work through a new focus on African talent development and workforce delivery — helping organisations access capable African professionals while helping talent build the practical skills required to succeed in today's and tomorrow's workplace.</p>
       </div>
     </section>
 
-    <PillarsSection />
-    <ApproachSection />
-
-    <section class="bg-white">
+    <section class="bg-limpar-pale">
       <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div class="aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-panel">
@@ -57,7 +66,7 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="bg-limpar-pale">
+    <section class="bg-white">
       <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-3">
           <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">Our Work Today, Our Direction Tomorrow</span>
@@ -70,9 +79,6 @@ usePageSeo({
         <p class="mt-10 max-w-2xl text-base leading-relaxed text-limpar-slate">This creates a more connected approach to talent — one that benefits both organisations and professionals.</p>
       </div>
     </section>
-
-    <WhoWeWorkWith />
-    <WhyLimparSection />
 
     <section class="bg-limpar-deep">
       <div class="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
