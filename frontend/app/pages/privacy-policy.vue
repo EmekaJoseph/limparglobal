@@ -26,9 +26,9 @@ const lastUpdated = 'September 23, 2026'
 
           <div>
             <h2>Information We Collect</h2>
-            <p class="mb-3">This website does not use contact forms. We collect information in two ways:</p>
+            <p class="mb-3">We collect information in the following ways:</p>
             <ul>
-              <li><strong>Information you provide directly.</strong> If you email us using a link on this site, we receive whatever you include — typically your name, email address and message.</li>
+              <li><strong>Information you provide directly.</strong> If you email us, we receive whatever you include — typically your name, email address and message. If you complete the Talent Application Form or the Employer Talent &amp; Workforce Request Form on this site, we collect the information you submit, which may include your name, contact details (email, phone/WhatsApp), location, LinkedIn or portfolio links, professional or organisational details, information about your skills, experience or workforce needs, and any documents you upload (such as a CV or job description).</li>
               <li><strong>Standard technical information.</strong> Like most websites, our hosting provider automatically logs basic technical data (such as IP address, browser type and pages visited) for security and operational purposes.</li>
             </ul>
           </div>
@@ -47,6 +47,8 @@ const lastUpdated = 'September 23, 2026'
             <h2>How We Use Information</h2>
             <ul>
               <li>To respond to your enquiries and requests</li>
+              <li>To process talent applications and employer workforce requests submitted through our forms</li>
+              <li>To assess and connect talent with relevant organisations and opportunities</li>
               <li>To provide information about our workforce, talent development and organisational solutions</li>
               <li>To maintain the security and performance of our website</li>
             </ul>
@@ -54,12 +56,12 @@ const lastUpdated = 'September 23, 2026'
 
           <div>
             <h2>How We Share Information</h2>
-            <p>We do not sell your personal information. We may share it with service providers who help us operate (such as our email or hosting provider), or where required by law.</p>
+            <p>We do not sell your personal information. We may share it with service providers who help us operate (such as our email or hosting provider), or where required by law. If you apply to join the Limpar Talent Pool, we may share relevant parts of your profile with organisations seeking talent through Limpar, as part of our workforce matching services. Information submitted through the Employer Talent &amp; Workforce Request Form is used to identify and propose suitable talent for that request and is not sold or shared beyond this purpose.</p>
           </div>
 
           <div>
             <h2>Data Retention</h2>
-            <p>We retain information from your enquiries only for as long as reasonably necessary to respond to you and manage our relationship with you or your organisation.</p>
+            <p>We retain information from your enquiries, talent applications and workforce requests only for as long as reasonably necessary to respond to you, process your submission and manage our relationship with you or your organisation.</p>
           </div>
 
           <div>

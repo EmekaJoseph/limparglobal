@@ -39,6 +39,15 @@ const form = reactive({
 const status = ref<'idle' | 'submitting' | 'success' | 'error'>('idle')
 const submitAttempted = ref(false)
 
+const progressSteps = [
+  { id: 'er-step-1', label: 'Organisation' },
+  { id: 'er-step-2', label: 'What Do You Need?' },
+  { id: 'er-step-3', label: 'Talent Requirement' },
+  { id: 'er-step-4', label: 'What Are You Looking For?' },
+  { id: 'er-step-5', label: 'How Can Limpar Help?' },
+  { id: 'er-step-6', label: 'Submit Your Request' }
+]
+
 const supportTypesError = computed(() => submitAttempted.value && form.supportTypes.length === 0 ? 'Please select at least one option.' : '')
 const talentAreasError = computed(() => submitAttempted.value && form.talentAreas.length === 0 ? 'Please select at least one option.' : '')
 const helpNeededError = computed(() => submitAttempted.value && form.helpNeeded.length === 0 ? 'Please select at least one option.' : '')
@@ -97,8 +106,11 @@ async function handleSubmit() {
       <p class="max-w-md text-sm leading-relaxed text-limpar-slate">Thank you for your workforce request. A Limpar representative will review it and contact you to clarify the role, timeline and required talent profile.</p>
     </div>
 
-    <form v-else class="flex flex-col gap-14" @submit.prevent="handleSubmit">
-      <FormSection index="1" title="Organisation">
+    <template v-else>
+    <FormProgress :steps="progressSteps" />
+
+    <form class="flex flex-col gap-14" @submit.prevent="handleSubmit">
+      <FormSection id="er-step-1" index="1" title="Organisation">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <FormField label="Organisation Name" required html-for="er-org-name">
             <input id="er-org-name" v-model="form.orgName" type="text" required :class="inputClass">
@@ -127,7 +139,7 @@ async function handleSubmit() {
         </div>
       </FormSection>
 
-      <FormSection index="2" title="What Do You Need?">
+      <FormSection id="er-step-2" index="2" title="What Do You Need?">
         <FormField label="What type of support are you looking for?" required :error="supportTypesError">
           <CheckboxGroup v-model="form.supportTypes" name="er-support-types" :options="supportTypeOptions" />
         </FormField>
@@ -136,7 +148,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="3" title="Talent Requirement">
+      <FormSection id="er-step-3" index="3" title="Talent Requirement">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <FormField label="What role(s) are you looking to fill?" required html-for="er-roles">
             <input id="er-roles" v-model="form.roles" type="text" required :class="inputClass">
@@ -159,7 +171,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="4" title="What Are You Looking For?">
+      <FormSection id="er-step-4" index="4" title="What Are You Looking For?">
         <FormField label="Briefly describe the role, key responsibilities and skills required." required html-for="er-role-description">
           <textarea id="er-role-description" v-model="form.roleDescription" rows="5" required :class="textareaClass" />
         </FormField>
@@ -179,7 +191,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="5" title="How Can Limpar Help?">
+      <FormSection id="er-step-5" index="5" title="How Can Limpar Help?">
         <FormField label="What would you like Limpar to do?" required :error="helpNeededError">
           <CheckboxGroup v-model="form.helpNeeded" name="er-help-needed" :options="limparHelpOptions" />
         </FormField>
@@ -188,7 +200,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <div class="flex flex-col gap-6 border-t-2 border-limpar-deep pt-8">
+      <div id="er-step-6" class="flex flex-col gap-6 border-t-2 border-limpar-deep pt-8 scroll-mt-44 lg:scroll-mt-52">
         <h3 class="font-heading text-xl font-bold text-limpar-ink sm:text-2xl">Submit Your Request</h3>
         <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-limpar-pale-border bg-white px-4 py-3 shadow-subtle has-[:checked]:border-limpar-deep has-[:checked]:bg-limpar-pale">
           <input v-model="form.consent" type="checkbox" required class="mt-0.5 h-4 w-4 shrink-0 rounded accent-limpar-deep">
@@ -201,6 +213,7 @@ async function handleSubmit() {
         <SubmitButton :status="status" label="Submit Request" class="self-start" />
       </div>
     </form>
+    </template>
 
     <div class="mt-14 flex flex-col gap-3 rounded-2xl border border-limpar-pale-border bg-limpar-pale p-8 shadow-subtle">
       <h3 class="font-heading text-lg font-bold text-limpar-ink">What happens next?</h3>

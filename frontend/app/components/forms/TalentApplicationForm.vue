@@ -52,6 +52,17 @@ const form = reactive({
 const status = ref<'idle' | 'submitting' | 'success' | 'error'>('idle')
 const areaOfInterestOptions = [...coreAcademyOptions, ...specialisedVerticalOptions]
 
+const progressSteps = [
+  { id: 'ta-step-1', label: 'Personal Information' },
+  { id: 'ta-step-2', label: 'Professional Profile' },
+  { id: 'ta-step-3', label: 'Area of Interest' },
+  { id: 'ta-step-4', label: 'Skills & Experience' },
+  { id: 'ta-step-5', label: 'Learning & Development' },
+  { id: 'ta-step-6', label: 'Assessment & Verification' },
+  { id: 'ta-step-7', label: 'Final Questions' },
+  { id: 'ta-step-8', label: 'Declaration & Consent' }
+]
+
 const nextSteps = [
   'Review your profile and experience.',
   'Contact you for additional information where required.',
@@ -126,8 +137,11 @@ async function handleSubmit() {
       <p class="max-w-md text-sm leading-relaxed text-limpar-slate">Thank you for applying to the Limpar Talent Pool. We'll review your profile and be in touch if there's a fit for our assessment and talent verification process.</p>
     </div>
 
-    <form v-else class="flex flex-col gap-14" @submit.prevent="handleSubmit">
-      <FormSection index="Section 1" title="Personal Information">
+    <template v-else>
+    <FormProgress :steps="progressSteps" />
+
+    <form class="flex flex-col gap-14" @submit.prevent="handleSubmit">
+      <FormSection id="ta-step-1" index="Section 1" title="Personal Information">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <FormField label="Full Name" required html-for="ta-full-name">
             <input id="ta-full-name" v-model="form.fullName" type="text" required :class="inputClass">
@@ -156,7 +170,7 @@ async function handleSubmit() {
         </div>
       </FormSection>
 
-      <FormSection index="Section 2" title="Professional Profile">
+      <FormSection id="ta-step-2" index="Section 2" title="Professional Profile">
         <FormField label="What best describes your current professional status?" required>
           <RadioGroup v-model="form.status" name="ta-status" required :options="professionalStatusOptions" />
         </FormField>
@@ -176,7 +190,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="Section 3" title="Area of Interest">
+      <FormSection id="ta-step-3" index="Section 3" title="Area of Interest">
         <FormField label="Which Limpar Talent Academy or Workforce Area are you interested in?" required>
           <RadioGroup v-model="form.areaOfInterest" name="ta-area" required :options="areaOfInterestOptions" />
         </FormField>
@@ -193,7 +207,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="Section 4" title="Skills & Experience">
+      <FormSection id="ta-step-4" index="Section 4" title="Skills & Experience">
         <FormField label="What are your top 5 professional or technical skills?" required>
           <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <input
@@ -229,7 +243,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="Section 5" title="Learning & Development">
+      <FormSection id="ta-step-5" index="Section 5" title="Learning & Development">
         <FormField label="What is the biggest skill gap you would like to close right now?" required html-for="ta-gap">
           <textarea id="ta-gap" v-model="form.skillGap" rows="3" required :class="textareaClass" />
         </FormField>
@@ -241,7 +255,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="Section 6" title="Assessment & Verification" description="To maintain the quality of the Limpar Talent Pool, applicants may be required to complete skills assessments, practical exercises, interviews or other verification activities.">
+      <FormSection id="ta-step-6" index="Section 6" title="Assessment & Verification" description="To maintain the quality of the Limpar Talent Pool, applicants may be required to complete skills assessments, practical exercises, interviews or other verification activities.">
         <FormField label="Are you willing to participate in Limpar's assessment and talent verification process?" required>
           <RadioGroup v-model="form.willingAssessment" name="ta-willing-assessment" required :options="['Yes', 'No']" />
         </FormField>
@@ -250,7 +264,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="Section 7" title="Final Questions">
+      <FormSection id="ta-step-7" index="Section 7" title="Final Questions">
         <FormField label="Why do you want to join the Limpar Talent Pool?" required html-for="ta-why">
           <textarea id="ta-why" v-model="form.whyJoin" rows="4" required :class="textareaClass" />
         </FormField>
@@ -262,7 +276,7 @@ async function handleSubmit() {
         </FormField>
       </FormSection>
 
-      <FormSection index="Declaration" title="Declaration & Consent">
+      <FormSection id="ta-step-8" index="Declaration" title="Declaration & Consent">
         <div class="flex flex-col gap-3 text-sm leading-relaxed text-limpar-slate">
           <p>I confirm that the information provided in this application is accurate to the best of my knowledge.</p>
           <p>I understand that submitting this application does not guarantee employment, training admission or placement.</p>
@@ -290,6 +304,7 @@ async function handleSubmit() {
         <SubmitButton :status="status" label="Submit Application" class="self-start" />
       </div>
     </form>
+    </template>
 
     <div class="mt-14 flex flex-col gap-4 rounded-2xl border border-limpar-pale-border bg-limpar-pale p-8 shadow-subtle">
       <h3 class="font-heading text-lg font-bold text-limpar-ink">What happens next?</h3>
