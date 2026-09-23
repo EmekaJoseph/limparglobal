@@ -1,0 +1,3 @@
+export const inputClass = 'w-full rounded-lg border border-limpar-pale-border bg-white px-4 py-2.5 text-sm text-limpar-ink shadow-subtle transition-colors placeholder:text-limpar-slate/50 focus:border-limpar-deep focus:outline-none focus:ring-2 focus:ring-limpar-deep/20'
+export const textareaClass = `${inputClass} resize-y`
+export const selectClass = `${inputClass} appearance-none bg-[url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2355667A%22%20stroke-width%3D%221.6%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:18px] bg-[right_0.75rem_center] bg-no-repeat pr-10`
