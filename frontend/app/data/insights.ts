@@ -3,6 +3,7 @@ export interface InsightPost {
   excerpt: string
   url: string
   date: string
+  category?: string
 }
 
 // Add real LinkedIn articles / posts here as they're published.
