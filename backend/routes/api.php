@@ -42,11 +42,13 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::patch('/talent-applications/{talentApplication}', [TalentApplicationController::class, 'update']);
         Route::delete('/talent-applications/{talentApplication}', [TalentApplicationController::class, 'destroy']);
         Route::get('/talent-applications/{talentApplication}/cv', [TalentApplicationController::class, 'downloadCv']);
+        Route::post('/talent-applications/{talentApplication}/message', [TalentApplicationController::class, 'sendMessage'])->middleware('throttle:10,1');
 
         Route::get('/employer-requests', [EmployerRequestController::class, 'index']);
         Route::get('/employer-requests/{employerRequest}', [EmployerRequestController::class, 'show']);
         Route::patch('/employer-requests/{employerRequest}', [EmployerRequestController::class, 'update']);
         Route::delete('/employer-requests/{employerRequest}', [EmployerRequestController::class, 'destroy']);
         Route::get('/employer-requests/{employerRequest}/jd', [EmployerRequestController::class, 'downloadJd']);
+        Route::post('/employer-requests/{employerRequest}/message', [EmployerRequestController::class, 'sendMessage'])->middleware('throttle:10,1');
     });
 });

@@ -223,6 +223,13 @@ function formatDate(value: string | null) {
         </div>
       </div>
 
+      <AdminEmailComposer
+        :endpoint="`/admin/talent-applications/${id}/message`"
+        :recipient-name="record.full_name"
+        :recipient-email="record.email"
+        default-subject="Your application to Limpar Global"
+      />
+
       <div class="rounded-2xl border border-limpar-pale-border bg-white p-5 shadow-subtle">
         <p class="mb-4 font-heading text-sm font-bold text-limpar-ink">Review</p>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-[200px_1fr]">

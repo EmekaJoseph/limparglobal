@@ -3,12 +3,18 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\SendMessageRequest;
 use App\Http\Requests\TalentApplications\StoreTalentApplicationRequest;
 use App\Http\Resources\TalentApplicationResource;
+use App\Mail\AdminMessageMail;
 use App\Models\TalentApplication;
+use App\Services\SubmissionNotifier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
+use Throwable;
 
 class TalentApplicationController extends Controller
 {
@@ -23,7 +29,7 @@ class TalentApplicationController extends Controller
         $cv = $request->file('cv');
         $cvPath = $cv->store('cvs');
 
-        TalentApplication::query()->create([
+        $application = TalentApplication::query()->create([
             'full_name' => $data['full_name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
@@ -59,6 +65,8 @@ class TalentApplicationController extends Controller
             'declaration_date' => $data['date'],
             'ip_address' => $request->ip(),
         ]);
+
+        app(SubmissionNotifier::class)->talentApplicationSubmitted($application);
 
         return response()->json(['message' => 'Application received.'], 201);
     }
@@ -134,5 +142,31 @@ class TalentApplicationController extends Controller
             $talentApplication->cv_path,
             $talentApplication->cv_original_name ?? 'cv.pdf'
         );
+    }
+
+    /**
+     * Send a one-off email to the applicant from the admin dashboard.
+     * Unlike the automatic notifications, this is a deliberate admin action —
+     * if it fails, the admin should be told so they can retry.
+     */
+    public function sendMessage(SendMessageRequest $request, TalentApplication $talentApplication)
+    {
+        $admin = $request->user();
+
+        try {
+            Mail::to($talentApplication->email)->send(new AdminMessageMail(
+                recipientName: $talentApplication->full_name,
+                subjectLine: $request->validated('subject'),
+                bodyText: $request->validated('message'),
+                adminName: $admin->name,
+                adminEmail: $admin->email,
+            ));
+        } catch (Throwable $e) {
+            Log::error('Admin message email failed to send: '.$e->getMessage());
+
+            return response()->json(['message' => 'Could not send the email. Please try again.'], 502);
+        }
+
+        return response()->json(['message' => 'Email sent.']);
     }
 }

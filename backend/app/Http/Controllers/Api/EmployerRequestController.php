@@ -3,12 +3,18 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\SendMessageRequest;
 use App\Http\Requests\EmployerRequests\StoreEmployerRequestRequest;
 use App\Http\Resources\EmployerRequestResource;
+use App\Mail\AdminMessageMail;
 use App\Models\EmployerRequest;
+use App\Services\SubmissionNotifier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
+use Throwable;
 
 class EmployerRequestController extends Controller
 {
@@ -23,7 +29,7 @@ class EmployerRequestController extends Controller
         $jdFile = $request->file('jd_file');
         $jdPath = $jdFile?->store('job-descriptions');
 
-        EmployerRequest::query()->create([
+        $employerRequest = EmployerRequest::query()->create([
             'organisation_name' => $data['organisation_name'],
             'website' => $data['website'],
             'industry' => $data['industry'],
@@ -50,6 +56,8 @@ class EmployerRequestController extends Controller
             'consent' => true,
             'ip_address' => $request->ip(),
         ]);
+
+        app(SubmissionNotifier::class)->employerRequestSubmitted($employerRequest);
 
         return response()->json(['message' => 'Request received.'], 201);
     }
@@ -125,5 +133,31 @@ class EmployerRequestController extends Controller
             $employerRequest->jd_path,
             $employerRequest->jd_original_name ?? 'job-description.pdf'
         );
+    }
+
+    /**
+     * Send a one-off email to the employer contact from the admin dashboard.
+     * Unlike the automatic notifications, this is a deliberate admin action —
+     * if it fails, the admin should be told so they can retry.
+     */
+    public function sendMessage(SendMessageRequest $request, EmployerRequest $employerRequest)
+    {
+        $admin = $request->user();
+
+        try {
+            Mail::to($employerRequest->email)->send(new AdminMessageMail(
+                recipientName: $employerRequest->contact_name,
+                subjectLine: $request->validated('subject'),
+                bodyText: $request->validated('message'),
+                adminName: $admin->name,
+                adminEmail: $admin->email,
+            ));
+        } catch (Throwable $e) {
+            Log::error('Admin message email failed to send: '.$e->getMessage());
+
+            return response()->json(['message' => 'Could not send the email. Please try again.'], 502);
+        }
+
+        return response()->json(['message' => 'Email sent.']);
     }
 }
