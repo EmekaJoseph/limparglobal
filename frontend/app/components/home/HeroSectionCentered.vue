@@ -5,7 +5,7 @@ import { company } from '~/data/company'
 <template>
   <section class="relative overflow-hidden bg-white">
     <div class="mx-auto max-w-5xl px-4 pb-20 pt-16 text-center sm:px-6 lg:px-8">
-      <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">African Workforce &amp; Talent Partner</span>
+      <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">African Workforce &amp; Talent Partner</span>
 
       <div class="relative mt-6">
         <div class="absolute -left-6 top-1/2 hidden -translate-y-1/2 flex-col gap-2.5 lg:flex xl:-left-16">

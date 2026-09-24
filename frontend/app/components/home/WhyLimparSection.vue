@@ -6,7 +6,7 @@ import { whyLimpar } from '~/data/whyLimpar'
   <section class="bg-white">
     <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-3">
-        <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">Why Limpar</span>
+        <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">Why Limpar</span>
         <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">A practical, integrated partner for growth</h2>
       </div>
       <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">

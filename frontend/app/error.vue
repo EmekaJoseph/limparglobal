@@ -26,7 +26,7 @@ function handleGoHome() {
           <AppIcon name="compass" class="h-7 w-7" />
         </div>
 
-        <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">
+        <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">
           {{ isNotFound ? 'Error 404' : 'Something Went Wrong' }}
         </span>
 

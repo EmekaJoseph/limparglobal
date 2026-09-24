@@ -44,7 +44,7 @@ usePageSeo({
 
         <template v-else>
           <div class="flex flex-col gap-3">
-            <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">What We Cover</span>
+            <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">What We Cover</span>
             <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">Topics we publish on</h2>
           </div>
           <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

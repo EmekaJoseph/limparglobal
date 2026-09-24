@@ -31,7 +31,7 @@ const focusAreas = [
     <section class="bg-white">
       <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-3">
-          <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">Who We Are</span>
+          <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">Who We Are</span>
           <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">Where people, organisations and growth meet</h2>
         </div>
         <p class="mt-6 text-lg leading-relaxed text-limpar-slate">We work at the intersection of people, organisations and growth — combining human capital expertise, organisational development, talent solutions and practical business support to help organisations solve challenges and move from strategy to execution.</p>
@@ -56,7 +56,7 @@ const focusAreas = [
           </div>
           <div class="flex flex-col gap-5">
             <div class="flex flex-col gap-3">
-              <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">Our Perspective</span>
+              <span class="inline-flex self-start items-center rounded-full bg-white px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">Our Perspective</span>
               <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">On African talent</h2>
             </div>
             <div class="flex flex-col gap-5 text-base leading-relaxed text-limpar-slate">
@@ -73,7 +73,7 @@ const focusAreas = [
     <section class="bg-white">
       <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-3">
-          <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">Our Work Today, Our Direction Tomorrow</span>
+          <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">Our Work Today, Our Direction Tomorrow</span>
           <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">A more connected approach to talent</h2>
           <p class="max-w-2xl text-base leading-relaxed text-limpar-slate">Limpar Global continues to work with organisations on immediate, practical business needs — from recruitment and HR systems to organisational development, capacity building, project support and workforce management. At the same time, we're building a broader workforce platform that connects:</p>
         </div>
@@ -86,7 +86,7 @@ const focusAreas = [
 
     <section class="bg-limpar-deep">
       <div class="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
-        <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-sky-light">Our Vision</span>
+        <span class="inline-flex self-start items-center rounded-full bg-white/10 px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-sky-light">Our Vision</span>
         <p class="mt-5 font-heading text-2xl font-bold leading-snug text-white sm:text-3xl">
           To become a trusted African partner for workforce development, talent delivery and organisational growth — connecting capable people with organisations and opportunities that enable them to thrive.
         </p>

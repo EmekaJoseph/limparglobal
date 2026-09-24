@@ -11,7 +11,7 @@ defineProps<{
     <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
       <div class="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
         <div class="flex max-w-2xl flex-col gap-5">
-          <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">{{ eyebrow }}</span>
+          <span class="inline-flex self-start items-center rounded-full bg-white px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">{{ eyebrow }}</span>
           <h1 class="font-heading text-4xl font-extrabold leading-tight text-limpar-ink sm:text-5xl">{{ title }}</h1>
           <p class="text-lg leading-relaxed text-limpar-slate">{{ description }}</p>
           <div v-if="$slots.default" class="mt-2 flex flex-wrap gap-4">

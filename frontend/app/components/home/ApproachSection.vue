@@ -6,7 +6,7 @@ import { orgProcess, talentProcess } from '~/data/processes'
   <section class="bg-white">
     <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
       <div class="mx-auto flex max-w-2xl flex-col gap-4 text-center">
-        <span class="font-heading text-sm font-bold uppercase tracking-widest text-limpar-deep">Our Approach</span>
+        <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">Our Approach</span>
         <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">Strategy, people and execution — working together</h2>
         <p class="text-base leading-relaxed text-limpar-slate">Organisations don't grow simply by hiring more people or providing more training. They grow when strategy, people, capabilities, processes and execution work together.</p>
       </div>
