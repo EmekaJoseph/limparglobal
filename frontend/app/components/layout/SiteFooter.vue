@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { footerNav } from '~/data/navigation'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 
 const year = new Date().getFullYear()
 </script>

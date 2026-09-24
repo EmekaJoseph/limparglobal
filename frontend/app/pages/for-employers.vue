@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { employerProcess } from '~/data/processes'
 import { employerServices } from '~/data/orgServices'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 
 usePageSeo({
   title: 'For Employers',

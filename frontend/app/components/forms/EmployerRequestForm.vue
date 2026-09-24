@@ -7,7 +7,7 @@ import {
   employerWorkArrangementOptions,
   limparHelpOptions
 } from '~/data/formOptions'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 import { inputClass, textareaClass } from '~/utils/formClasses'
 
 const form = reactive({

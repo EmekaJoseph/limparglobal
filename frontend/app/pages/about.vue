@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { platformPipeline } from '~/data/processes'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 
 usePageSeo({
   title: 'About Limpar',

@@ -11,7 +11,7 @@ import {
   learningGoalOptions,
   hoursPerWeekOptions
 } from '~/data/formOptions'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 import { inputClass, textareaClass, selectClass } from '~/utils/formClasses'
 
 const form = reactive({

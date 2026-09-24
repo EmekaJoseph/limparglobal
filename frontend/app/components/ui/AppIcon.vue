@@ -136,5 +136,78 @@ defineProps<{
       <circle cx="7" cy="18" r="1.6" />
       <circle cx="17" cy="18" r="1.6" />
     </template>
+
+    <template v-else-if="name === 'grid'">
+      <rect x="3" y="3" width="8" height="8" rx="1.5" />
+      <rect x="13" y="3" width="8" height="8" rx="1.5" />
+      <rect x="3" y="13" width="8" height="8" rx="1.5" />
+      <rect x="13" y="13" width="8" height="8" rx="1.5" />
+    </template>
+
+    <template v-else-if="name === 'inbox'">
+      <path d="M3 12h4.5l1.5 3h6l1.5-3H21" />
+      <path d="M5.5 5h13l2.5 7v7a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19v-7l2.5-7Z" />
+    </template>
+
+    <template v-else-if="name === 'logout'">
+      <path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3" />
+      <path d="M14 16l4-4-4-4" />
+      <path d="M18 12H9" />
+    </template>
+
+    <template v-else-if="name === 'settings'">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 13.5a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V19a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H4a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 5.6 8.6a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H10a1.65 1.65 0 0 0 1-1.51V2a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V8.4c.14.6.62 1.06 1.51 1.1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" />
+    </template>
+
+    <template v-else-if="name === 'lock'">
+      <rect x="4.5" y="10.5" width="15" height="10" rx="2" />
+      <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+      <path d="M12 14.5v3" />
+    </template>
+
+    <template v-else-if="name === 'search'">
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="M20 20l-4.8-4.8" />
+    </template>
+
+    <template v-else-if="name === 'download'">
+      <path d="M12 4v11" />
+      <path d="M7.5 11l4.5 4.5L16.5 11" />
+      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+    </template>
+
+    <template v-else-if="name === 'trash'">
+      <path d="M4 7h16" />
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+      <path d="M6.5 7l1 12.5A2 2 0 0 0 9.5 21h5a2 2 0 0 0 2-2L17.5 7" />
+      <path d="M10 11v6M14 11v6" />
+    </template>
+
+    <template v-else-if="name === 'map-pin'">
+      <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" />
+      <circle cx="12" cy="9.5" r="2.4" />
+    </template>
+
+    <template v-else-if="name === 'arrow-left'">
+      <path d="M20 12H4" />
+      <path d="M10 6l-6 6 6 6" />
+    </template>
+
+    <template v-else-if="name === 'clock'">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
+    </template>
+
+    <template v-else-if="name === 'eye'">
+      <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </template>
+
+    <template v-else-if="name === 'eye-off'">
+      <path d="M3 3l18 18" />
+      <path d="M10.6 5.63A10.6 10.6 0 0 1 12 5.5c6 0 9.5 6.5 9.5 6.5a15.6 15.6 0 0 1-3.15 3.99M6.5 6.94A15.7 15.7 0 0 0 2.5 12S6 18.5 12 18.5a9.9 9.9 0 0 0 4.16-.9" />
+      <path d="M9.9 10.03A3 3 0 0 0 14 14.06" />
+    </template>
   </svg>
 </template>

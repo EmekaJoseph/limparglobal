@@ -14,6 +14,13 @@ export default defineNuxtConfig({
       routes: ['/sitemap.xml']
     }
   },
+  routeRules: {
+    // Admin dashboard: authenticated, per-viewer data — never prerendered as
+    // static HTML. Served as a client-rendered SPA shell instead (noindex
+    // meta tag is set in the admin layout since the @nuxtjs/robots module
+    // isn't installed).
+    '/admin/**': { ssr: false }
+  },
   runtimeConfig: {
     public: {
       siteUrl: 'https://limparglobal.org',

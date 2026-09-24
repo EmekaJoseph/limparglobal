@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { orgServices } from '~/data/orgServices'
 import { orgProcess } from '~/data/processes'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 
 usePageSeo({
   title: 'Organisational Solutions',

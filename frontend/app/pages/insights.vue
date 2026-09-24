@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { insights } from '~/data/insights'
 import { insightCategories } from '~/data/insightCategories'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 
 usePageSeo({
   title: 'Insights',

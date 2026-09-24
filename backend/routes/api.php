@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Admin\SettingsController;
 use App\Http\Controllers\Api\Admin\SiteVisitController as AdminSiteVisitController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\EmployerRequestController;
+use App\Http\Controllers\Api\PublicSettingsController;
 use App\Http\Controllers\Api\SiteVisitController;
 use App\Http\Controllers\Api\TalentApplicationController;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,9 @@ Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:6,
 Route::post('/talent-applications', [TalentApplicationController::class, 'store'])->middleware('throttle:20,1');
 Route::post('/employer-requests', [EmployerRequestController::class, 'store'])->middleware('throttle:20,1');
 Route::post('/track-visit', [SiteVisitController::class, 'track'])->middleware('throttle:60,1');
+
+// Public contact settings (email/phone/linkedin) shown in the site footer etc.
+Route::get('/settings', [PublicSettingsController::class, 'show'])->middleware('throttle:60,1');
 
 // Authenticated admin routes.
 Route::middleware('auth:sanctum')->group(function () {

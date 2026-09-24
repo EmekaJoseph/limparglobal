@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { company } from '~/data/company'
+const company = useCompanySettings()
 
 usePageSeo({
   title: 'Terms of Use',

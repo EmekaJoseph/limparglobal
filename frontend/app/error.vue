@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
-import { company } from '~/data/company'
+const company = useCompanySettings()
 
 const props = defineProps<{
   error: NuxtError

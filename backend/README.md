@@ -56,8 +56,13 @@ All routes are prefixed with `/api`. Public routes need no auth; everything unde
 - The frontend's `status` field (professional status, e.g. "Recent Graduate") is stored as `professional_status` in the `talent_applications` table, since `status`/`review_status` here means the admin's own review workflow (new/contacted/shortlisted/rejected) — different concept, same-ish name, kept apart deliberately.
 - Uploaded CVs and job descriptions are stored on the private `local` disk (`storage/app/private/...`), not publicly accessible — they can only be fetched via the authenticated download routes above.
 - `skills`, `support_types`, `talent_areas`, and `help_needed` are stored as JSON columns and returned as arrays.
+- `GET /settings` is a small public (no-auth) endpoint separate from `/admin/settings` — it exposes only `email`/`phone`/`linkedin` for the marketing site's footer/contact page to consume.
+- Single-resource JSON responses (`show`/`update` endpoints, `/login`, `/me`) are **flat**, not wrapped in a `data` key (`JsonResource::withoutWrapping()` in `AppServiceProvider`). Paginated list endpoints are unaffected and still return `{ data, links, meta }`.
+
+## What's built on the frontend
+
+The Nuxt admin dashboard lives at `frontend/app/pages/admin/**` (layout: `frontend/app/layouts/admin.vue`), fully client-rendered (`routeRules['/admin/**'] = { ssr: false }` in `nuxt.config.ts`) so it's never statically prerendered. It covers login, a dashboard summary, talent applications and employer requests (list + detail + status/notes + CV/JD download + delete), visitors, settings, and password security — the full route list above. The public marketing pages also now pull `email`/`linkedin` from `GET /settings` on the client (`useCompanySettings()`), falling back to the hardcoded values in `frontend/app/data/company.ts` if the backend is unreachable.
 
 ## What's not built yet
 
-- The frontend doesn't call `/track-visit` yet — add that instrumentation when ready.
-- No admin-facing UI — this is the API only. The Nuxt admin interface is separate, upcoming work.
+- The frontend doesn't call `/track-visit` yet — add that instrumentation when ready, so the Visitors screen has real data.
