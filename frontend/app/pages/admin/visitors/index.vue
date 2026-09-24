@@ -67,7 +67,26 @@ function goToPage(newPage: number) {
       <AdminEmptyState v-else-if="!rows.length" icon="globe" title="No visits recorded yet" description="Visits will appear here once the frontend starts reporting page views." />
 
       <template v-else>
-        <div class="overflow-x-auto">
+        <!-- Mobile: stacked cards, no hidden columns -->
+        <div class="divide-y divide-limpar-pale-border sm:hidden">
+          <div v-for="row in rows" :key="row.ip_address" class="px-4 py-3.5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="flex items-center gap-1.5 text-sm font-medium text-limpar-ink">
+                <AppIcon name="map-pin" class="h-3.5 w-3.5 text-limpar-slate" />
+                {{ row.ip_address }}
+              </span>
+              <span class="rounded-full bg-limpar-pale px-2.5 py-1 text-xs font-semibold text-limpar-deep">{{ row.visit_count }} visits</span>
+            </div>
+            <div class="mt-1.5 flex items-center justify-between gap-2 text-xs text-limpar-slate">
+              <span>First {{ formatDate(row.first_seen) }}</span>
+              <span>Last {{ formatDate(row.last_seen) }}</span>
+            </div>
+            <p v-if="row.last_path" class="mt-1 truncate text-xs text-limpar-ink">{{ row.last_path }}</p>
+          </div>
+        </div>
+
+        <!-- Desktop/tablet: full table -->
+        <div class="hidden overflow-x-auto sm:block">
           <table class="w-full min-w-[680px] text-left text-sm">
             <thead>
               <tr class="border-b border-limpar-pale-border text-xs font-semibold uppercase tracking-wide text-limpar-slate/70">

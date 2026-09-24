@@ -103,7 +103,29 @@ function goToPage(newPage: number) {
       <AdminEmptyState v-else-if="!rows.length" icon="briefcase" title="No requests found" description="Try adjusting your search or status filter." />
 
       <template v-else>
-        <div class="overflow-x-auto">
+        <!-- Mobile: stacked cards, no hidden columns -->
+        <div class="divide-y divide-limpar-pale-border sm:hidden">
+          <button
+            v-for="row in rows"
+            :key="row.id"
+            type="button"
+            class="flex w-full flex-col gap-1.5 px-4 py-3.5 text-left transition-colors hover:bg-limpar-pale/40"
+            @click="navigateTo(`/admin/employer-requests/${row.id}`)"
+          >
+            <div class="flex items-start justify-between gap-2">
+              <p class="truncate text-sm font-semibold text-limpar-ink">{{ row.organisation_name }}</p>
+              <AdminStatusBadge :status="row.review_status" />
+            </div>
+            <p class="truncate text-xs text-limpar-slate">{{ row.contact_name }} &middot; {{ row.email }}</p>
+            <div class="flex items-center justify-between gap-2 text-xs text-limpar-slate">
+              <span class="truncate">{{ row.roles }} &middot; {{ row.headcount }} needed</span>
+              <span class="shrink-0">{{ formatDate(row.created_at) }}</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Desktop/tablet: full table -->
+        <div class="hidden overflow-x-auto sm:block">
           <table class="w-full min-w-[640px] text-left text-sm">
             <thead>
               <tr class="border-b border-limpar-pale-border text-xs font-semibold uppercase tracking-wide text-limpar-slate/70">

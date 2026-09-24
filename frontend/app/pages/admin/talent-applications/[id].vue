@@ -209,10 +209,8 @@ function formatDate(value: string | null) {
           <AdminDetailField label="Why they'd be a strong candidate">{{ record.strong_candidate }}</AdminDetailField>
           <AdminDetailField v-if="record.anything_else" label="Anything else">{{ record.anything_else }}</AdminDetailField>
         </div>
-        <div class="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-limpar-pale/50 px-4 py-3 text-xs text-limpar-slate">
-          <span>Declared by <strong class="text-limpar-ink">{{ record.applicant_name }}</strong> on {{ record.declaration_date ?? '—' }}</span>
+        <div v-if="record.has_cv" class="mt-5 flex items-center justify-end rounded-xl bg-limpar-pale/50 px-4 py-3 text-xs text-limpar-slate">
           <button
-            v-if="record.has_cv"
             type="button"
             class="flex items-center gap-1.5 font-semibold text-limpar-deep hover:underline"
             @click="handleDownloadCv"

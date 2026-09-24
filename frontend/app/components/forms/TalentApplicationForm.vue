@@ -46,7 +46,7 @@ const form = reactive({
   anythingElse: '',
   agree: false,
   applicantName: '',
-  date: ''
+  date: new Date().toISOString().slice(0, 10)
 })
 
 const status = ref<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -290,8 +290,8 @@ async function handleSubmit() {
           <FormField label="Applicant Name" required html-for="ta-applicant-name">
             <input id="ta-applicant-name" v-model="form.applicantName" type="text" required :class="inputClass">
           </FormField>
-          <FormField label="Date" required html-for="ta-date">
-            <input id="ta-date" v-model="form.date" type="date" required :class="inputClass">
+          <FormField label="Date" required html-for="ta-date" help="Auto-set to today's date">
+            <input id="ta-date" v-model="form.date" type="date" required readonly :class="inputClass">
           </FormField>
         </div>
       </FormSection>
