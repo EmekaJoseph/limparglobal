@@ -15,7 +15,11 @@ usePageSeo({
       eyebrow="Insights"
       title="Thought leadership on African workforce and talent"
       description="Perspectives, trends and practical thinking on African workforce development, talent readiness and organisational growth — organised around the topics that matter most to the organisations and professionals we work with."
-    />
+    >
+      <template #visual>
+        <HeroIconCluster :icons="['layers', 'academic-cap', 'trending-up', 'linkedin']" />
+      </template>
+    </PageHero>
 
     <section class="bg-white">
       <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">

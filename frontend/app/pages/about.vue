@@ -22,7 +22,11 @@ const focusAreas = [
       eyebrow="About Limpar"
       title="Building stronger organisations. Developing better talent. Enabling sustainable growth."
       description="Limpar Global is a consulting and workforce solutions firm helping organisations build the people, capabilities, systems and operational foundations they need to grow."
-    />
+    >
+      <template #visual>
+        <HeroIconCluster :icons="['users', 'globe', 'compass', 'target']" />
+      </template>
+    </PageHero>
 
     <section class="bg-white">
       <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
