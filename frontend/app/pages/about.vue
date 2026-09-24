@@ -24,7 +24,15 @@ const focusAreas = [
       description="Limpar Global is a consulting and workforce solutions firm helping organisations build the people, capabilities, systems and operational foundations they need to grow."
     >
       <template #visual>
-        <HeroIconCluster :icons="['users', 'globe', 'compass', 'target']" />
+        <div class="aspect-[4/5] w-full max-w-xs shrink-0 overflow-hidden rounded-3xl shadow-panel sm:max-w-sm lg:w-80">
+          <img
+            src="/images/about-hero.webp"
+            alt="Two Limpar Global colleagues reviewing workforce data together"
+            class="h-full w-full object-cover"
+            width="1100"
+            height="1100"
+          >
+        </div>
       </template>
     </PageHero>
 

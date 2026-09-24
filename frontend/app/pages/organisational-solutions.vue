@@ -47,11 +47,11 @@ usePageSeo({
             <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">From understanding to measurable results</h2>
             <p class="max-w-2xl text-base leading-relaxed text-limpar-slate">We start by understanding the organisation's actual challenge, identify the capability or structural gaps affecting performance, and develop practical solutions that can be implemented and measured.</p>
           </div>
-          <div class="order-first aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-panel lg:order-last">
+          <div class="order-first aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-panel lg:order-last">
             <img
               src="/images/hero-team-wide.webp"
               alt="A Limpar Global team working through an organisational development plan together"
-              class="h-full w-full object-cover object-[center_20%]"
+              class="h-full w-full object-cover object-top"
               width="1024"
               height="1024"
             >

@@ -7,7 +7,9 @@ import { company } from '~/data/company'
     <div class="mx-auto max-w-8xl px-4 pb-16 pt-14 sm:px-6 lg:px-8">
       <div class="flex flex-col items-center gap-14 lg:flex-row">
         <div class="flex flex-1 flex-col gap-6">
-          <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">African Workforce
+          <span
+            class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">African
+            Workforce
             &amp; Talent Partner</span>
           <h1 class="font-heading text-5xl font-extrabold leading-[1.1] text-limpar-ink sm:text-6xl">Building Africa's
             workforce for global opportunity</h1>
@@ -36,11 +38,12 @@ import { company } from '~/data/company'
           </div>
         </div>
         <div class="relative w-full flex-1">
-          <div class="aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-panel">
+          <div class="aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-panel">
             <img src="/images/hero-team-wide.webp" alt="A Limpar Global talent team collaborating in a modern office"
-              class="h-full w-full object-cover object-[center_28%]" width="1024" height="1024">
+              class="h-full w-full object-cover object-top" width="1024" height="1024">
           </div>
-          <div class="absolute -bottom-6 -left-6 hidden max-w-[13rem] flex-col gap-1 rounded-2xl bg-white p-5 shadow-card ring-1 ring-limpar-pale-border sm:flex">
+          <div
+            class="absolute -bottom-6 -left-6 hidden max-w-[13rem] flex-col gap-1 rounded-2xl bg-white p-5 shadow-card ring-1 ring-limpar-pale-border sm:flex">
             <span class="font-heading text-sm font-bold text-limpar-ink">{{ company.tagline }}</span>
             <span class="text-xs text-limpar-slate">{{ company.location }}</span>
           </div>
