@@ -9,6 +9,7 @@ usePageSeo({
   <div>
     <HeroSection />
     <!-- <HeroSectionCentered /> -->
+    <TrustedBySection />
     <PillarsSection />
     <ApproachSection />
     <WhoWeWorkWith />
