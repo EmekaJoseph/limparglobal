@@ -1,28 +1,34 @@
 export interface WhyItem {
   title: string
   description: string
+  icon: string
 }
 
 export const whyLimpar: WhyItem[] = [
   {
     title: 'Practical, not theoretical',
-    description: 'We focus on solutions that can be implemented in the real world.'
+    description: 'We focus on solutions that can be implemented in the real world.',
+    icon: 'bolt'
   },
   {
     title: 'Integrated, not fragmented',
-    description: 'People, processes, systems and strategy are interconnected. Our solutions reflect that.'
+    description: 'People, processes, systems and strategy are interconnected. Our solutions reflect that.',
+    icon: 'puzzle'
   },
   {
     title: 'Employer-led',
-    description: 'Our talent development work is shaped by the capabilities organisations actually need.'
+    description: 'Our talent development work is shaped by the capabilities organisations actually need.',
+    icon: 'briefcase'
   },
   {
     title: 'African perspective, global outlook',
-    description: 'We understand the African operating environment while designing solutions with global workforce realities in mind.'
+    description: 'We understand the African operating environment while designing solutions with global workforce realities in mind.',
+    icon: 'globe'
   },
   {
     title: 'Built for growth',
-    description: 'Whether strengthening foundations or preparing for the next stage of growth, we help build the capabilities required to move forward.'
+    description: 'Whether strengthening foundations or preparing for the next stage of growth, we help build the capabilities required to move forward.',
+    icon: 'trending-up'
   }
 ]
 

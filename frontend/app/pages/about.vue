@@ -92,7 +92,7 @@ const focusAreas = [
       </div>
     </section>
 
-    <section class="bg-limpar-deep">
+    <section class="bg-limpar-ink">
       <div class="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
         <span class="inline-flex self-start items-center rounded-full bg-white/10 px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-sky-light">Our Vision</span>
         <p class="mt-5 font-heading text-2xl font-bold leading-snug text-white sm:text-3xl">

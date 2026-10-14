@@ -13,10 +13,15 @@ import { whyLimpar } from '~/data/whyLimpar'
         <div
           v-for="item in whyLimpar"
           :key="item.title"
-          class="flex flex-col gap-2 rounded-2xl border border-limpar-pale-border bg-white p-6 shadow-subtle transition-shadow duration-200 hover:shadow-card"
+          class="flex flex-col gap-4 rounded-2xl border border-limpar-pale-border bg-white p-6 shadow-subtle transition-shadow duration-200 hover:shadow-card"
         >
-          <h3 class="font-heading text-base font-bold text-limpar-ink">{{ item.title }}</h3>
-          <p class="text-sm leading-relaxed text-limpar-slate">{{ item.description }}</p>
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-limpar-deep text-white shadow-soft">
+            <AppIcon :name="item.icon" class="h-5 w-5" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-heading text-base font-bold text-limpar-ink">{{ item.title }}</h3>
+            <p class="text-sm leading-relaxed text-limpar-slate">{{ item.description }}</p>
+          </div>
         </div>
       </div>
     </div>
