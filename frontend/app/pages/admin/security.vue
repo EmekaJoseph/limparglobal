@@ -4,7 +4,7 @@ definePageMeta({
   middleware: 'admin-auth'
 })
 
-useHead({ title: 'Security — Limpar Global Admin' })
+useHead({ title: 'Security | Limpar Global Admin' })
 
 const form = reactive({
   current_password: '',

@@ -15,7 +15,7 @@ const talentDevelopmentPillar = pillars.find((pillar) => pillar.to === '/talent-
     <PageHero
       eyebrow="Talent Development &amp; Opportunity"
       title="Build the skills to become work-ready and globally competitive"
-      description="Join the Limpar talent ecosystem — develop relevant, market-ready skills, get assessed and verified, and access real workforce opportunities."
+      description="Join the Limpar talent ecosystem, develop relevant, market-ready skills, get assessed and verified, and access real workforce opportunities."
     >
       <NuxtLink
         to="#apply"
@@ -53,7 +53,7 @@ const talentDevelopmentPillar = pillars.find((pillar) => pillar.to === '/talent-
       <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl rounded-3xl border border-limpar-pale-border bg-white p-10 text-center shadow-subtle">
           <p class="font-heading text-xl font-bold leading-snug text-limpar-ink sm:text-2xl">
-            "We focus on developing talent around real workforce demand — not training for training's sake."
+            "We focus on developing talent around real workforce demand, not training for training's sake."
           </p>
         </div>
       </div>

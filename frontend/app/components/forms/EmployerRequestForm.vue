@@ -183,7 +183,7 @@ async function handleSubmit() {
             v-model="form.hasJD"
             name="er-has-jd"
             required
-            :options="['Yes — I will upload it below', 'No — I would like Limpar to help define the role']"
+            :options="['Yes, I will upload it below', 'No, I would like Limpar to help define the role']"
           />
         </FormField>
         <FormField label="Upload Job Description / Requirements" help="Optional" html-for="er-jd-file">

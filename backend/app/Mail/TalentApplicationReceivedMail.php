@@ -17,7 +17,7 @@ class TalentApplicationReceivedMail extends Mailable
 
     public function build(): self
     {
-        return $this->subject("We've received your application — Limpar Global")
+        return $this->subject("We've received your application | Limpar Global")
             ->view('emails.talent.received')
             ->with(['application' => $this->application]);
     }

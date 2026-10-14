@@ -16,7 +16,7 @@ usePageSeo({
       <div class="relative mx-auto max-w-4xl px-4 py-24 sm:px-6 lg:px-8">
         <span class="inline-flex items-center rounded-full bg-white px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">Insights</span>
         <h1 class="mt-6 font-heading text-4xl font-extrabold leading-tight text-limpar-ink sm:text-5xl">Thought leadership on African workforce and talent</h1>
-        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-limpar-slate">Perspectives, trends and practical thinking on African workforce development, talent readiness and organisational growth — organised around the topics that matter most to the organisations and professionals we work with.</p>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-limpar-slate">Perspectives, trends and practical thinking on African workforce development, talent readiness and organisational growth, organised around the topics that matter most to the organisations and professionals we work with.</p>
         <div class="mt-8 flex flex-wrap gap-2">
           <span v-for="category in insightCategories" :key="category.title" class="rounded-full border border-limpar-pale-border bg-white px-3.5 py-1.5 text-xs font-semibold text-limpar-deep">
             {{ category.title }}

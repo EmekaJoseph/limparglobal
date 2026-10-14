@@ -14,7 +14,7 @@ usePageSeo({
     <PageHero
       eyebrow="Organisational Growth"
       title="Build the structures, people and systems to scale sustainably"
-      description="We help growing organisations build the people systems and processes required to operate effectively — from HR strategy to organisational design and capacity building."
+      description="We help growing organisations build the people systems and processes required to operate effectively, from HR strategy to organisational design and capacity building."
     >
       <NuxtLink
         :to="`mailto:${company.email}?subject=Organisational%20Solutions`"

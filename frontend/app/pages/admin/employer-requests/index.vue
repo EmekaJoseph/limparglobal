@@ -7,7 +7,7 @@ definePageMeta({
   middleware: 'admin-auth'
 })
 
-useHead({ title: 'Employer Requests — Limpar Global Admin' })
+useHead({ title: 'Employer Requests | Limpar Global Admin' })
 
 interface EmployerRequestRow {
   id: number

@@ -56,7 +56,7 @@ const lastUpdated = 'September 23, 2026'
 
           <div>
             <h2>Governing Law</h2>
-            <p>These terms are governed by the laws of the jurisdiction in which Limpar Global operates. <span class="italic text-limpar-slate/70">[Placeholder — to be confirmed with Limpar Global's registered jurisdiction.]</span></p>
+            <p>These terms are governed by the laws of the jurisdiction in which Limpar Global operates. <span class="italic text-limpar-slate/70">[Placeholder, to be confirmed with Limpar Global's registered jurisdiction.]</span></p>
           </div>
 
           <div>

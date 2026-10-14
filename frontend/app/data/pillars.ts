@@ -10,7 +10,7 @@ export const pillars: Pillar[] = [
   {
     number: '1',
     title: 'Workforce Solutions',
-    description: 'Source, place and manage high-quality African talent — from sourcing and onboarding to ongoing workforce administration.',
+    description: 'Source, place and manage high-quality African talent, from sourcing and onboarding to ongoing workforce administration.',
     to: '/for-employers',
     icon: 'briefcase'
   },

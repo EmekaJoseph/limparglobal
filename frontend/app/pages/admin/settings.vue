@@ -6,7 +6,7 @@ definePageMeta({
   middleware: 'admin-auth'
 })
 
-useHead({ title: 'Settings — Limpar Global Admin' })
+useHead({ title: 'Settings | Limpar Global Admin' })
 
 const form = reactive({ email: '', phone: '', linkedin: '' })
 const loading = ref(true)

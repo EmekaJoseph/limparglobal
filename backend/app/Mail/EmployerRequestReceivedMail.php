@@ -17,7 +17,7 @@ class EmployerRequestReceivedMail extends Mailable
 
     public function build(): self
     {
-        return $this->subject("We've received your request — Limpar Global")
+        return $this->subject("We've received your request | Limpar Global")
             ->view('emails.employer.received')
             ->with(['employerRequest' => $this->employerRequest]);
     }

@@ -6,7 +6,7 @@ definePageMeta({
   middleware: 'admin-auth'
 })
 
-useHead({ title: 'Visitors — Limpar Global Admin' })
+useHead({ title: 'Visitors | Limpar Global Admin' })
 
 interface VisitorRow {
   ip_address: string
@@ -110,7 +110,7 @@ function goToPage(newPage: number) {
                 </td>
                 <td class="px-5 py-3.5 text-limpar-slate">{{ formatDate(row.first_seen) }}</td>
                 <td class="px-5 py-3.5 text-limpar-slate">{{ formatDate(row.last_seen) }}</td>
-                <td class="max-w-[220px] truncate px-5 py-3.5 text-limpar-ink" :title="row.last_user_agent ?? undefined">{{ row.last_path ?? '—' }}</td>
+                <td class="max-w-[220px] truncate px-5 py-3.5 text-limpar-ink" :title="row.last_user_agent ?? undefined">{{ row.last_path ?? 'N/A' }}</td>
               </tr>
             </tbody>
           </table>

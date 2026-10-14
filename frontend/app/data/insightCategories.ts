@@ -22,7 +22,7 @@ export const insightCategories: InsightCategory[] = [
   },
   {
     title: 'The Future of Work',
-    description: 'How work, skills and employment are evolving — and what it means for organisations and talent.',
+    description: 'How work, skills and employment are evolving and what it means for organisations and talent.',
     icon: 'compass'
   },
   {

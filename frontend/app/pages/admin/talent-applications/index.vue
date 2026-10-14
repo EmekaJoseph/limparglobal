@@ -7,7 +7,7 @@ definePageMeta({
   middleware: 'admin-auth'
 })
 
-useHead({ title: 'Talent Applications — Limpar Global Admin' })
+useHead({ title: 'Talent Applications | Limpar Global Admin' })
 
 interface TalentApplicationRow {
   id: number

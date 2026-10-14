@@ -4,7 +4,7 @@ definePageMeta({
   middleware: 'admin-auth'
 })
 
-useHead({ title: 'Dashboard — Limpar Global Admin' })
+useHead({ title: 'Dashboard | Limpar Global Admin' })
 
 interface DashboardData {
   talent_applications: { total: number; new: number; this_week: number }

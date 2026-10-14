@@ -134,5 +134,5 @@ export const limparHelpOptions = [
   'Shortlist candidates',
   'Manage placed/contract staff',
   'Support onboarding and HR administration',
-  "I'm not sure yet — I'd like to discuss"
+  "I'm not sure yet, I'd like to discuss"
 ]

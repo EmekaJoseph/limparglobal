@@ -14,7 +14,7 @@ usePageSeo({
     <WhoWeWorkWith />
     <WhyLimparSection />
     <CtaBand title="Let's talk about what you need to grow"
-      description="Whether you're building a team in Africa, developing your workforce, or growing your organisation — we're ready to help."
+      description="Whether you're building a team in Africa, developing your workforce, or growing your organisation, we're ready to help."
       primary-label="Talk to Us About Your Workforce Needs" primary-to="/contact" secondary-label="Join the Talent Pool"
       secondary-to="/for-talent#apply" />
   </div>

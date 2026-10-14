@@ -13,7 +13,7 @@ usePageSeo({
     <PageHero
       eyebrow="Talent Development"
       title="Employer-led learning, built around real workforce demand"
-      description="We're building a talent development ecosystem that bridges the gap between learning and employment — practical learning, competency development, assessment, professional readiness and connection to real opportunities."
+      description="We're building a talent development ecosystem that bridges the gap between learning and employment, through practical learning, competency development, assessment, professional readiness and connection to real opportunities."
     >
       <NuxtLink
         to="/for-talent#apply"

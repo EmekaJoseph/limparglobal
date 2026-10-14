@@ -28,7 +28,7 @@ const lastUpdated = 'September 23, 2026'
             <h2>Information We Collect</h2>
             <p class="mb-3">We collect information in the following ways:</p>
             <ul>
-              <li><strong>Information you provide directly.</strong> If you email us, we receive whatever you include — typically your name, email address and message. If you complete the Talent Application Form or the Employer Talent &amp; Workforce Request Form on this site, we collect the information you submit, which may include your name, contact details (email, phone/WhatsApp), location, LinkedIn or portfolio links, professional or organisational details, information about your skills, experience or workforce needs, and any documents you upload (such as a CV or job description).</li>
+              <li><strong>Information you provide directly.</strong> If you email us, we receive whatever you include, typically your name, email address and message. If you complete the Talent Application Form or the Employer Talent &amp; Workforce Request Form on this site, we collect the information you submit, which may include your name, contact details (email, phone/WhatsApp), location, LinkedIn or portfolio links, professional or organisational details, information about your skills, experience or workforce needs, and any documents you upload (such as a CV or job description).</li>
               <li><strong>Standard technical information.</strong> Like most websites, our hosting provider automatically logs basic technical data (such as IP address, browser type and pages visited) for security and operational purposes.</li>
             </ul>
           </div>

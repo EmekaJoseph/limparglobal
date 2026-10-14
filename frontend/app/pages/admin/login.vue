@@ -7,7 +7,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Admin Login — Limpar Global',
+  title: 'Admin Login | Limpar Global',
   meta: [{ name: 'robots', content: 'noindex, nofollow' }]
 })
 
