@@ -7,7 +7,7 @@ useHead({
   titleTemplate: (chunk) =>
     chunk && chunk !== 'Limpar Global'
       ? `${chunk} | Limpar Global`
-      : 'Limpar Global | African Workforce & Talent Partner',
+      : 'Limpar Global | Workforce & Talent Partner',
   script: [
     {
       type: 'application/ld+json',

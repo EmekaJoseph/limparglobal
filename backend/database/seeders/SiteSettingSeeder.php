@@ -15,7 +15,7 @@ class SiteSettingSeeder extends Seeder
     {
         $settings = SiteSetting::current();
         $settings->fill([
-            'email' => 'limparglobal@gmail.com',
+            'email' => 'hello@limparglobal.org',
             'phone' => null,
             'linkedin' => 'https://www.linkedin.com/company/limpar-global/',
         ])->save();

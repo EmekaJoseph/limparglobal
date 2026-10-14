@@ -24,12 +24,12 @@ class SiteSetting extends Model
      */
     public static function adminRecipients(): array
     {
-        $default = 'limparglobal@gmail.com';
+        $default = 'hello@limparglobal.org';
         $configured = static::current()->email;
 
         return collect([$default, $configured])
             ->filter()
-            ->unique(fn (string $email) => strtolower($email))
+            ->unique(fn(string $email) => strtolower($email))
             ->values()
             ->all();
     }

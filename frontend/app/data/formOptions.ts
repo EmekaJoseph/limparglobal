@@ -32,7 +32,7 @@ export const experienceRangeOptions = [
 ]
 
 export const coreAcademyOptions = [
-  'Cybersecurity & Cloud',
+  // 'Cybersecurity & Cloud',
   'Revenue Operations, Sales & Customer Success',
   'Project, Programme & Business Operations',
   'Finance, Risk & Compliance Operations'

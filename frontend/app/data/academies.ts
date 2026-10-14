@@ -6,11 +6,11 @@ export interface Academy {
 
 // Core Talent Academies
 export const academies: Academy[] = [
-  {
-    title: 'Cybersecurity & Cloud',
-    description: 'Building job-ready skills in cybersecurity fundamentals and cloud operations for a fast-growing digital economy.',
-    icon: 'shield-check'
-  },
+  // {
+  //   title: 'Cybersecurity & Cloud',
+  //   description: 'Building job-ready skills in cybersecurity fundamentals and cloud operations for a fast-growing digital economy.',
+  //   icon: 'shield-check'
+  // },
   {
     title: 'Revenue Operations, Sales & Customer Success',
     description: 'Practical, employer-aligned capability in revenue operations, sales execution and customer success delivery.',

@@ -8,7 +8,8 @@ const company = useCompanySettings()
       <div class="flex flex-col items-center gap-14 lg:flex-row">
         <div class="flex flex-1 flex-col gap-6">
           <span
-            class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">African
+            class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">
+            <!-- African -->
             Workforce
             &amp; Talent Partner</span>
           <h1 class="font-heading text-5xl font-extrabold leading-[1.1] text-limpar-ink sm:text-6xl">Building Africa's
