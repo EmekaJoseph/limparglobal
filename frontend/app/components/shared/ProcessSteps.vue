@@ -19,7 +19,7 @@ defineProps<{
           <AppIcon :name="step.icon" class="h-5 w-5" />
         </span>
         <div>
-          <span class="block font-heading text-[11px] font-bold uppercase tracking-wider text-limpar-sky">Step {{ String(i + 1).padStart(2, '0') }}</span>
+          <span class="block font-heading text-[11px] font-bold uppercase tracking-wider text-limpar-amber">Step {{ String(i + 1).padStart(2, '0') }}</span>
           <span class="mt-1 block text-sm font-semibold leading-snug text-limpar-ink">{{ step.label }}</span>
         </div>
       </div>

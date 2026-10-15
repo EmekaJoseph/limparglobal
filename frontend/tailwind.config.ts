@@ -17,11 +17,12 @@ export default <Partial<Config>>{
           'sky-light': '#5FD0F5',
           pale: '#EAF4FB',
           'pale-border': '#D6E8F7',
-          white: '#FFFFFF'
+          white: '#FFFFFF',
+          amber: '#D98B2B'
         }
       },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        heading: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
         sans: ['"Source Sans 3"', 'system-ui', 'sans-serif']
       },
       boxShadow: {

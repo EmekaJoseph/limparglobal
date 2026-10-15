@@ -39,13 +39,16 @@ usePageSeo({
     </PageHero>
 
     <section class="bg-white">
-      <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-3">
-          <span class="inline-flex self-start items-center rounded-full bg-limpar-pale px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">What We Offer</span>
+          <p class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-widest text-limpar-deep">
+            <span class="h-px w-6 bg-limpar-deep" />
+            What We Offer
+          </p>
           <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">HR, organisational development and capacity building</h2>
         </div>
         <div class="mt-10">
-          <ServiceList :items="orgServices" />
+          <CapabilityList :items="orgServices" />
         </div>
       </div>
     </section>
@@ -54,7 +57,10 @@ usePageSeo({
       <div class="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div class="flex flex-col gap-3">
-            <span class="inline-flex self-start items-center rounded-full bg-white px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest text-limpar-deep">Our Approach</span>
+            <p class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-widest text-limpar-deep">
+              <span class="h-px w-6 bg-limpar-deep" />
+              Our Approach
+            </p>
             <h2 class="font-heading text-3xl font-bold text-limpar-ink sm:text-4xl">From understanding to measurable results</h2>
             <p class="max-w-2xl text-base leading-relaxed text-limpar-slate">We start by understanding the organisation's actual challenge, identify the capability or structural gaps affecting performance, and develop practical solutions that can be implemented and measured.</p>
           </div>
