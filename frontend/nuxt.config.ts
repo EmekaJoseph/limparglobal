@@ -24,8 +24,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl: 'https://limparglobal.org',
-      // Laravel API base URL. Override with NUXT_PUBLIC_API_BASE_URL once the backend is deployed.
-      apiBaseUrl: 'http://localhost:8000/api'
+      // Laravel API base URL. This is baked in at build time (static site), so
+      // local dev should override it via NUXT_PUBLIC_API_BASE_URL rather than
+      // editing this default.
+      apiBaseUrl: 'https://api.limparglobal.org/api'
+      //  apiBaseUrl: 'http://localhost:8000/api'
     }
   },
   app: {
