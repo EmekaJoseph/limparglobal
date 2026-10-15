@@ -1,0 +1,16 @@
+# This is a static-generated Nuxt site. Routes with dynamic segments
+# (e.g. /admin/employer-requests/2) have no matching file on disk, since
+# the build has no way to know every possible ID ahead of time. Without
+# this rewrite, a direct visit or refresh on such a URL hits Apache
+# directly and 404s before the client-side app ever loads.
+#
+# Fix: for any request that isn't a real file or directory, serve the
+# SPA shell (200.html) instead, without changing the URL in the browser.
+# Nuxt's client-side router then reads the real URL and renders the
+# correct page.
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /200.html [L]
