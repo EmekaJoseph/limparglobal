@@ -13,6 +13,17 @@ usePageSeo({
   <div>
     <PageHero eyebrow="Workforce Solutions" title="Access and manage high-quality African talent"
       description="From defining your workforce need to placing and managing verified talent, we help organisations build reliable, capable teams across Africa.">
+      <template #visual>
+        <div class="aspect-[4/5] w-full max-w-xs shrink-0 overflow-hidden rounded-3xl shadow-panel sm:max-w-sm lg:w-80">
+          <img
+            src="/images/for-employers-hero.webp"
+            alt="A team reviewing workforce plans together around a conference table"
+            class="h-full w-full object-cover"
+            width="1100"
+            height="1100"
+          >
+        </div>
+      </template>
       <NuxtLink to="#request"
         class="inline-flex items-center gap-3 rounded-full bg-limpar-deep py-2 pl-6 pr-2 text-sm font-bold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-limpar-deep-dark hover:shadow-card">
         Request Talent

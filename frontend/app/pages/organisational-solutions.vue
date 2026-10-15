@@ -16,6 +16,17 @@ usePageSeo({
       title="Build the structures, people and systems to scale sustainably"
       description="We help growing organisations build the people systems and processes required to operate effectively, from HR strategy to organisational design and capacity building."
     >
+      <template #visual>
+        <div class="aspect-[4/5] w-full max-w-xs shrink-0 overflow-hidden rounded-3xl shadow-panel sm:max-w-sm lg:w-80">
+          <img
+            src="/images/organisational-solutions-hero.webp"
+            alt="Two colleagues working through a strategic plan together"
+            class="h-full w-full object-cover"
+            width="1100"
+            height="1100"
+          >
+        </div>
+      </template>
       <NuxtLink
         :to="`mailto:${company.email}?subject=Organisational%20Solutions`"
         class="inline-flex items-center gap-3 rounded-full bg-limpar-deep py-2 pl-6 pr-2 text-sm font-bold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-limpar-deep-dark hover:shadow-card"

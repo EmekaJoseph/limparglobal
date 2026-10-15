@@ -17,6 +17,17 @@ const talentDevelopmentPillar = pillars.find((pillar) => pillar.to === '/talent-
       title="Build the skills to become work-ready and globally competitive"
       description="Join the Limpar talent ecosystem, develop relevant, market-ready skills, get assessed and verified, and access real workforce opportunities."
     >
+      <template #visual>
+        <div class="aspect-[4/5] w-full max-w-xs shrink-0 overflow-hidden rounded-3xl shadow-panel sm:max-w-sm lg:w-80">
+          <img
+            src="/images/for-talent-hero.webp"
+            alt="A confident young professional ready to join the Limpar talent pool"
+            class="h-full w-full object-cover"
+            width="1100"
+            height="1100"
+          >
+        </div>
+      </template>
       <NuxtLink
         to="#apply"
         class="inline-flex items-center gap-3 rounded-full bg-limpar-deep py-2 pl-6 pr-2 text-sm font-bold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-limpar-deep-dark hover:shadow-card"

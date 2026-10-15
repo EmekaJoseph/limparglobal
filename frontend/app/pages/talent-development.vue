@@ -15,6 +15,17 @@ usePageSeo({
       title="Employer-led learning, built around real workforce demand"
       description="We're building a talent development ecosystem that bridges the gap between learning and employment, through practical learning, competency development, assessment, professional readiness and connection to real opportunities."
     >
+      <template #visual>
+        <div class="aspect-[4/5] w-full max-w-xs shrink-0 overflow-hidden rounded-3xl shadow-panel sm:max-w-sm lg:w-80">
+          <img
+            src="/images/talent-development-hero.webp"
+            alt="Colleagues working through a learning session together"
+            class="h-full w-full object-cover"
+            width="1100"
+            height="1100"
+          >
+        </div>
+      </template>
       <NuxtLink
         to="/for-talent#apply"
         class="inline-flex items-center gap-3 rounded-full bg-limpar-deep py-2 pl-6 pr-2 text-sm font-bold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-limpar-deep-dark hover:shadow-card"
